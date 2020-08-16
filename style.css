@@ -1,0 +1,63 @@
+body {
+    background: #222;
+}
+
+body .main {
+    width: 100vw;
+    height: 100vh;
+}
+
+body .main .title {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+body .main .title strong {
+    color: green;
+    text-decoration: underline;
+}
+
+body .main .image {
+    margin: 0 280px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 0;
+}
+
+body .main .image:hover {
+    background: red;
+}
+
+body .main .image img {
+    width: 300px;
+}
+
+body .main #presentation {
+    color: gold;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+body .main p:hover {
+    color: #222;
+}
+
+body .main #bio {
+    color: white;
+}
+
+body .main #bio li {
+    margin-left: 50px;
+}
+
+body .bottom a {
+    color: gray;
+    text-decoration: none;
+    position: fixed;
+    bottom: 0;
+}
