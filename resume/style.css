@@ -1,0 +1,27 @@
+html {
+  font-size: 90%;
+}
+#main {
+  font-family: "Times New Roman", serif;
+}
+a {
+  color: #000;
+}
+
+a:hover {
+  color: blue;
+}
+
+#my_photo {
+  border: 3px solid black;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+#personal_info {
+  font-size: 19px;
+  position: absolute;
+  top: 37px;
+  left: 230px;
+  border: 3px solid gray;
+  padding: 5px;
+}
