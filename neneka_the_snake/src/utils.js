@@ -18,3 +18,11 @@ function checkSelfColision () {
   }
   return false;
 }
+
+function drawScore () {
+  
+  textSize(14);
+  textFont(gameFont);
+  fill(COLOR_GAMEOVER_SCREEN);
+  text("SCORE: " + score, 3, GAME_HEIGHT - SQUARE_SIZE);
+}

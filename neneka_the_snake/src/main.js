@@ -17,6 +17,7 @@ const WIDTH = GAME_WIDTH / SQUARE_SIZE;
 const HEIGHT = GAME_HEIGHT / SQUARE_SIZE;
 
 let play = true;
+let score = 0;
 
 let food = { x:  ~~(Math.random() * WIDTH), y: ~~(Math.random() * HEIGHT) };
 let snake = [ { x: 10, y: 10, direction: 2 } ];
@@ -55,6 +56,7 @@ function draw() {
       if (play) {
         background(COLOR_BG);
         drawSnake();
+        drawScore();
         updateSnakePos();
         if (checkSelfColision()) {
           end = new Date().getTime();
@@ -62,6 +64,7 @@ function draw() {
           SCREEN = 1;
         }
         if (checkFoodColision()) {
+          score++;
           resetFood(); 
           upgradeSnake();
         }
@@ -160,6 +163,7 @@ function keyPressed() {
   else if (SCREEN == 1) {
     if (keyCode == ENTER) {
       SCREEN = 0;
+      score = 0;
       start = new Date().getTime();
       snake = [ { x: 10, y: 10, direction: 2 } ];
       noLoop();
