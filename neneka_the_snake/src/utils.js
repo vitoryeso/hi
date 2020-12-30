@@ -4,10 +4,26 @@ function newDrawRect( posX, posY, color ) {
 }
 
 function checkFoodColision() {
-  if (snake[0].x == food.x && snake[0].y == food.y) {
-    return true;
+  for (var i=0; i<3; i++) {
+    for (var j=0; j<3; j++) {
+      if (snake[0].x == food.x+i && snake[0].y == food.y+j) {
+        return true;
+      }
+      if (snake[0].x == food.x+i && snake[0].y == food.y+j+1) {
+        return true;
+      }
+      if (snake[0].x == food.x+i && snake[0].y == food.y+j-1) {
+        return true;
+      }
+      if (snake[0].x == food.x+i+1 && snake[0].y == food.y+j) {
+        return true;
+      }
+      if (snake[0].x == food.x+i-1 && snake[0].y == food.y+j) {
+        return true;
+      }
+    }
   }
-  else return false;
+  return false;
 }
 
 function checkSelfColision () {
